@@ -1,0 +1,10 @@
+basic
+{ 
+N=20
+ttotal=100000
+tstep=0.1
+trotter=false
+DoNormalize=true
+Normalize=true
+initialstate=oneuponedown
+} 
