@@ -16,13 +16,13 @@ main()
   auto state = InitState(sites);
   for (int i=1; i <= N; ++i)
     state.set(i, i % 2 != 0 ? "Up" : "Dn");
-  auto psi = IQMPS(state);
+  auto psi = MPS(state);
 
   while(true)
   {
     for(int i=1; i < N; ++i)
     {
-      IQTensor AA = psi.A(i) * psi.A(i+1);
+      ITensor AA = psi.A(i) * psi.A(i+1);
 
       //Make random ITensor with indices k,l,m
       auto k = Index("index k",5);
